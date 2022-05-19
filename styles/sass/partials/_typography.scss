@@ -4,11 +4,33 @@
 
 $raleway: 'Raleway', sans-serif; 
 $amaticSc: 'Amatic SC', sans-serif;
+$red: #F05454;
+$black: #121212;
+$white: #F5F5F5;
+$navy: #30475E;
+$headfont: 4rem;
+$subheadfont: 2.5rem;
+
+body {
+    background-color: $white;
+}
+
+h1, h2 {
+    color: $red
+}
 
 h1 {
     font-family: $raleway;
+    font-size: $headfont;    
+    text-transform: uppercase;
 }
 
-p {
+h2 {
     font-family: $amaticSc;
+    font-size: $subheadfont;
+}
+
+label {
+    font-family: $amaticSc;
+    color: $navy;
 }
