@@ -17,6 +17,7 @@ musicApp.getArtist = function () {
     api_key: musicApp.apiKey,
     method: musicApp.method,
     format: musicApp.format,
+    limit: `100`,
   });
 
   fetch(lastFmUrl)
@@ -26,8 +27,9 @@ musicApp.getArtist = function () {
     .then((jsonData) => {
       musicApp.dropdownOptions(jsonData);
     })
-    .catch(function () {
+    .catch(function (err) {
       alert('Your request could not be retrieved');
+      console.log(err);
     });
 };
 
@@ -51,9 +53,18 @@ musicApp.dropdownOptions = (objectOfArtists) => {
     const optionEl = document.createElement('option');
     optionEl.innerText = `${individualArtist.name}`;
     select.appendChild(optionEl);
+
+    optionEl.addEventListener('click', () => {
+      const artistInfoSection = document.querySelector('.artistInfo');
+
+      artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
+      <h4>Play Count: ${individualArtist.playcount}</h4>
+      <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
+      </p>
+      <img src="${individualArtist.image[1]['#text']}"/>
+      `;
+    });
   });
 };
-
-musicApp;
 
 musicApp.init();
