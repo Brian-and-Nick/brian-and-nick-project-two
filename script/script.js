@@ -32,11 +32,7 @@ musicApp.getArtist = function(){
 
 }
 
-// // artists = {
-//     artist = {
 
-//     }
-// }
 
 // Grab the names of the artists and populate it in the dropdown menu.
 // The function needs to create 'option' and put the names of the artists in the drop down menu.
@@ -44,21 +40,31 @@ musicApp.getArtist = function(){
 // then at the end add a click event listener to see what user selects. 
 // Append user's choice onto the page with name, playcount, and url
 
+
 musicApp.dropdownOptions = (objectOfArtists) => {
+
     const select = document.querySelector('select');
     const artistArray = objectOfArtists.artists.artist;
 
     artistArray.forEach((individualArtist) => {
-    
-        const optionEl = document.createElement('option')
-        optionEl.innerText = `${individualArtist.name}`
+        const optionEl = document.createElement('option');
+        optionEl.innerText = `${individualArtist.name}`;
         select.appendChild(optionEl);
-    })
-
     
-}
+        optionEl.addEventListener('click', () => {
+        const artistInfoSection = document.querySelector('.artistInfo');
+        artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
+        <h4>Play Count: ${individualArtist.playcount}</h4>
+        <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
+        </p>`;
+        });
+    });
+};
 
-musicApp
+
+
+
+
 
 musicApp.init();
 

@@ -15,22 +15,52 @@ body {
     background-color: $white;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     color: $red
 }
 
-h1 {
+h1 { 
+    margin-bottom: 0px;
+}
+
+h2 {
+    margin: 0;
+}
+
+h1, h3 {
     font-family: $raleway;
     font-size: $headfont;    
     text-transform: uppercase;
 }
 
-h2 {
+
+h3, h4, p {
+    margin: 20px 0;
+    text-align: center;
+}
+
+p {
+    font-size: $subheadfont;
+    font-family: $raleway;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+h2, h4, footer {
     font-family: $amaticSc;
     font-size: $subheadfont;
 }
 
 label {
     font-family: $amaticSc;
+    font-size: 4rem;
     color: $navy;
 }
+
+footer {
+    text-align: center;
+    margin: 40px;
+}
+
