@@ -1,0 +1,48 @@
+@media (max-width: 960px) {
+    .headingWords {
+
+        h1, h2 {
+            text-align: center;
+        }
+
+    }
+
+    .selectArtist {
+        #artist, #randomizer {
+            width: 80%;
+        }
+    }
+
+    .artistInfo {
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .headingWords {
+
+        h1, h2 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+    }
+
+    .selectArtist {
+        #artist, #randomizer {
+            width: 80%;
+        }
+        
+    }
+
+    .artistInfo {
+        h3 {
+            font-size: 2rem;
+        }
+    }
+};

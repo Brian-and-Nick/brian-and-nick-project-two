@@ -25,6 +25,7 @@ musicApp.getArtist = function(){
     })
     .then((jsonData) => {
         musicApp.dropdownOptions(jsonData);
+        musicApp.randomArtist(jsonData);
     })
     .catch(function(){
         alert('Your request could not be retrieved');
@@ -47,19 +48,44 @@ musicApp.dropdownOptions = (objectOfArtists) => {
     const artistArray = objectOfArtists.artists.artist;
 
     artistArray.forEach((individualArtist) => {
+
         const optionEl = document.createElement('option');
         optionEl.innerText = `${individualArtist.name}`;
         select.appendChild(optionEl);
-    
-        optionEl.addEventListener('click', () => {
-        const artistInfoSection = document.querySelector('.artistInfo');
-        artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
-        <h4>Play Count: ${individualArtist.playcount}</h4>
-        <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
-        </p>`;
-        });
+
+            optionEl.addEventListener('click', () => {
+
+                const artistInfoSection = document.querySelector('.artistInfo');
+
+                artistInfoSection.innerHTML = 
+                `<h3>${individualArtist.name}</h3>
+                <h4>Play Count: ${individualArtist.playcount}</h4>
+                <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
+                </p>`;
+            });
+
     });
 };
+
+musicApp.randomArtist = (objectOfArtists) => {
+
+    const randomButton = document.querySelector('#randomizer'); 
+
+        randomButton.addEventListener('click', () => {
+
+            const randomArray = objectOfArtists.artists.artist;
+            const recommend = Math.floor(Math.random() * randomArray.length);
+
+            const artistInfoSection = document.querySelector('.artistInfo');
+
+                artistInfoSection.innerHTML = 
+                `<h3>${randomArray[recommend].name}</h3>
+                <h4>Play Count: ${randomArray[recommend].playcount}</h4>
+                <p><a href="${randomArray[recommend].url}" target="_blank">Last.fm Profile</a>
+                </p>`;
+        })
+
+}
 
 
 
