@@ -10,25 +10,27 @@
   <body>
     <div class="wrapper">
       <div class="headingWords">
-        <h1>HOT Artists App</h1>
+        <h1>💥HOT💥 Artists</h1>
 
-        <h2>
-          how many streams does your favourite artist have?...Select an artist
-          to find out!
-        </h2>
+        <h2>how many streams does your favourite artist have?</h2>
+        <h2>Select an artist to find out!</h2>
       </div>
 
       <div class="selectArtist">
         <label for="artist">Choose an artist</label>
         <select name="artist" id="artist">
           <!-- Will be populated by using API -->
+          <option value="" selected disabled hidden>Choose here</option>
         </select>
+
+        <label for="randomizer"></label>
+        <button type="submit" id="randomizer">Recommend Me An Artist</button>
       </div>
 
       <div class="artistInfo">
         <!-- Also will be populated by using API with name, playcount, and URL -->
       </div>
-      <footer>Made in Juno College 2022</footer>
+      <footer>Made by Nick and Brian @ Juno College 2022</footer>
     </div>
 
     <script src="./script/script.js"></script>

@@ -17,7 +17,6 @@ musicApp.getArtist = function () {
     api_key: musicApp.apiKey,
     method: musicApp.method,
     format: musicApp.format,
-    limit: `100`,
   });
 
   fetch(lastFmUrl)
@@ -26,18 +25,12 @@ musicApp.getArtist = function () {
     })
     .then((jsonData) => {
       musicApp.dropdownOptions(jsonData);
+      musicApp.randomArtist(jsonData);
     })
-    .catch(function (err) {
+    .catch(function () {
       alert('Your request could not be retrieved');
-      console.log(err);
     });
 };
-
-// // artists = {
-//     artist = {
-
-//     }
-// }
 
 // Grab the names of the artists and populate it in the dropdown menu.
 // The function needs to create 'option' and put the names of the artists in the drop down menu.
@@ -58,12 +51,26 @@ musicApp.dropdownOptions = (objectOfArtists) => {
       const artistInfoSection = document.querySelector('.artistInfo');
 
       artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
-      <h4>Play Count: ${individualArtist.playcount}</h4>
-      <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
-      </p>
-      <img src="${individualArtist.image[1]['#text']}"/>
-      `;
+                <h4>Play Count: ${individualArtist.playcount}</h4>
+                <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
+                </p>`;
     });
+  });
+};
+
+musicApp.randomArtist = (objectOfArtists) => {
+  const randomButton = document.querySelector('#randomizer');
+
+  randomButton.addEventListener('click', () => {
+    const randomArray = objectOfArtists.artists.artist;
+    const recommend = Math.floor(Math.random() * randomArray.length);
+
+    const artistInfoSection = document.querySelector('.artistInfo');
+
+    artistInfoSection.innerHTML = `<h3>${randomArray[recommend].name}</h3>
+                <h4>Play Count: ${randomArray[recommend].playcount}</h4>
+                <p><a href="${randomArray[recommend].url}" target="_blank">Last.fm Profile</a>
+                </p>`;
   });
 };
 
