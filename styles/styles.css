@@ -44,8 +44,12 @@ p a {
 }
 
 h2,
-h4,
-footer {
+h4 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 2.5rem;
+}
+
+footer p {
   font-family: "Amatic SC", sans-serif;
   font-size: 2.5rem;
 }
@@ -433,8 +437,12 @@ p a {
 }
 
 h2,
-h4,
-footer {
+h4 {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 2.5rem;
+}
+
+footer p {
   font-family: "Amatic SC", sans-serif;
   font-size: 2.5rem;
 }

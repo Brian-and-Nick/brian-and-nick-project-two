@@ -6,6 +6,9 @@ musicApp.method = `chart.gettopartists`;
 musicApp.format = `json`;
 musicApp.limit = '';
 
+musicApp.select = document.querySelector('select');
+musicApp.artistInfoSection = document.querySelector('.artistInfo');
+
 musicApp.init = () => {
   musicApp.getArtist();
 };
@@ -39,21 +42,22 @@ musicApp.getArtist = function () {
 // Append user's choice onto the page with name, playcount, and url
 
 musicApp.dropdownOptions = (objectOfArtists) => {
-  const select = document.querySelector('select');
   const artistArray = objectOfArtists.artists.artist;
 
   artistArray.forEach((individualArtist) => {
     const optionEl = document.createElement('option');
     optionEl.innerText = `${individualArtist.name}`;
-    select.appendChild(optionEl);
+    optionEl.value = `${individualArtist.name}`;
+    musicApp.select.appendChild(optionEl);
 
-    optionEl.addEventListener('click', () => {
-      const artistInfoSection = document.querySelector('.artistInfo');
-
-      artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
-                <h4>Play Count: ${individualArtist.playcount}</h4>
-                <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
-                </p>`;
+    musicApp.select.addEventListener('change', function () {
+      if (this.value === optionEl.value) {
+        const artistInfoSection = document.querySelector('.artistInfo');
+        artistInfoSection.innerHTML = `<h3>${individualArtist.name}</h3>
+            <h4>Play Count: ${individualArtist.playcount}</h4>
+            <p><a href="${individualArtist.url}" target="_blank">Last.fm Profile</a>
+            </p>`;
+      }
     });
   });
 };

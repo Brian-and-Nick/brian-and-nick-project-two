@@ -8,20 +8,24 @@
     <title>Hot Artist App</title>
   </head>
   <body>
-    <div class="wrapper">
+    <header class="wrapper">
       <div class="headingWords">
         <h1>💥HOT💥 Artists</h1>
 
         <h2>how many streams does your favourite artist have?</h2>
         <h2>Select an artist to find out!</h2>
       </div>
+    </header>
 
+    <main class="wrapper">
       <div class="selectArtist">
-        <label for="artist">Choose an artist</label>
-        <select name="artist" id="artist">
-          <!-- Will be populated by using API -->
-          <option value="" selected disabled hidden>Choose here</option>
-        </select>
+        <form action="" class="selectArtist">
+          <label for="artist">Choose an artist</label>
+          <select name="artist" id="artist">
+            <!-- Will be populated by using API -->
+            <option value="" selected disabled hidden>Choose here</option>
+          </select>
+        </form>
 
         <label for="randomizer"></label>
         <button type="submit" id="randomizer">Recommend Me An Artist</button>
@@ -30,8 +34,11 @@
       <div class="artistInfo">
         <!-- Also will be populated by using API with name, playcount, and URL -->
       </div>
-      <footer>Made by Nick and Brian @ Juno College 2022</footer>
-    </div>
+    </main>
+
+    <footer class="wrapper">
+      <p>Made by Nick and Brian @ Juno College 2022</p>
+    </footer>
 
     <script src="./script/script.js"></script>
   </body>

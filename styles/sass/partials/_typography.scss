@@ -54,10 +54,15 @@ p {
 }
 
 h2,
-h4,
-footer {
+h4 {
   font-family: $amaticSc;
   font-size: $subheadfont;
+}
+footer {
+  p {
+    font-family: $amaticSc;
+    font-size: $subheadfont;
+  }
 }
 
 label {
