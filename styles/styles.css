@@ -37,9 +37,14 @@ p a {
   text-decoration: none;
 }
 
-h2, h4, footer {
+h2, h4 {
   font-family: "Amatic SC", sans-serif;
   font-size: 2.5rem;
+}
+
+footer {
+  font-size: 1.5rem;
+  font-family: "Amatic SC", sans-serif;
 }
 
 label {
@@ -321,7 +326,7 @@ html {
   text-align: center;
 }
 .selectArtist #artist, .selectArtist #randomizer {
-  width: 50%;
+  width: 60%;
   -ms-flex-item-align: center;
       align-self: center;
   padding: 10px;
@@ -397,9 +402,14 @@ p a {
   text-decoration: none;
 }
 
-h2, h4, footer {
+h2, h4 {
   font-family: "Amatic SC", sans-serif;
   font-size: 2.5rem;
+}
+
+footer {
+  font-size: 1.5rem;
+  font-family: "Amatic SC", sans-serif;
 }
 
 label {
@@ -437,6 +447,6 @@ footer {
   }
 
   .artistInfo h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
