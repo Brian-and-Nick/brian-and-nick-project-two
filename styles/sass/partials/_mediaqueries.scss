@@ -18,6 +18,11 @@
       font-size: 3rem;
     }
   }
+  footer {
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -40,5 +45,10 @@
     h3 {
       font-size: 2rem;
     }
+  }
+  .socialsWrapper {
+    display: flex;
+
+    flex-direction: column;
   }
 } ;

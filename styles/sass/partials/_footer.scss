@@ -1,0 +1,49 @@
+.madeByFooter {
+  text-align: center;
+  background: $red;
+}
+
+footer {
+  h4 {
+    font-family: $raleway;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: $white;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  a:hover,
+  a:focus {
+    border: none;
+  }
+  li {
+    margin: 0 0.5em;
+  }
+}
+
+.socialsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialsContainer {
+  background-color: $black;
+}
+i {
+  color: $white;
+  transition: 0.1s linear;
+}
+
+i:hover,
+i:focus {
+  color: $red;
+  font-size: 0.95rem;
+}
