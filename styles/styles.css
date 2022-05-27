@@ -42,15 +42,14 @@ p {
   font-family: "Raleway", sans-serif;
 }
 
-a {
+.artistInfo a {
   text-decoration: none;
   color: #121212;
   border-radius: 100px;
   padding: 0.2em;
 }
-
-a:hover,
-a:focus {
+.artistInfo a:hover,
+.artistInfo a:focus {
   color: #f05454;
   border: #f05454 solid 1px;
 }
@@ -69,6 +68,17 @@ footer p {
 
 option {
   color: #3d6892;
+}
+
+span a {
+  text-decoration: none;
+  color: #121212;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+span a:hover,
+span a:focus {
+  color: #f5f5f5;
 }
 
 html {
@@ -406,8 +416,9 @@ label {
 }
 
 .artistInfo {
-  padding-top: 2em;
-  min-height: 30vh;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+  min-height: 45vh;
 }
 .artistInfo h3 {
   padding: 0;
@@ -457,15 +468,14 @@ p {
   font-family: "Raleway", sans-serif;
 }
 
-a {
+.artistInfo a {
   text-decoration: none;
   color: #121212;
   border-radius: 100px;
   padding: 0.2em;
 }
-
-a:hover,
-a:focus {
+.artistInfo a:hover,
+.artistInfo a:focus {
   color: #f05454;
   border: #f05454 solid 1px;
 }
@@ -486,11 +496,26 @@ option {
   color: #3d6892;
 }
 
+span a {
+  text-decoration: none;
+  color: #121212;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+span a:hover,
+span a:focus {
+  color: #f5f5f5;
+}
+
 .madeByFooter {
   text-align: center;
   background: #f05454;
 }
 
+footer {
+  position: sticky;
+  bottom: 0;
+}
 footer h4 {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
@@ -560,9 +585,16 @@ i:focus {
     font-size: 0.8rem;
   }
 }
+@media (max-width: 650px) {
+  .artistInfo h3 {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 480px) {
-  .headingWords h1,
-.headingWords h2 {
+  .headingWords h1 {
+    font-size: 2.5rem;
+  }
+  .headingWords h2 {
     text-align: center;
     font-size: 2rem;
   }
@@ -570,10 +602,6 @@ i:focus {
   .selectArtist #artist,
 .selectArtist #randomizer {
     width: 80%;
-  }
-
-  .artistInfo h3 {
-    font-size: 2rem;
   }
 
   .socialsWrapper {
@@ -588,18 +616,17 @@ i:focus {
 
   .brianSocialsList,
 .nickSocialsList {
-    margin: 1em 5em;
+    margin: 1em 3em;
   }
 
   .artistInfo a {
     font-size: 1.5rem;
+    color: #3d6892;
   }
 
-  option {
-    font-size: 1rem;
-  }
-
-  button {
-    font-size: 1rem;
+  option,
+select,
+button {
+    font-size: 0.7rem;
   }
 }

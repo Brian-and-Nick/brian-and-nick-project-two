@@ -50,17 +50,19 @@ p {
   font-size: $subheadfont;
   font-family: $raleway;
 }
-a {
-  text-decoration: none;
-  color: $black;
-  // transition: 0.2s linear;
-  border-radius: 100px;
-  padding: 0.2em;
-}
-a:hover,
-a:focus {
-  color: $red;
-  border: $red solid 1px;
+.artistInfo {
+  a {
+    text-decoration: none;
+    color: $black;
+    // transition: 0.2s linear;
+    border-radius: 100px;
+    padding: 0.2em;
+  }
+  a:hover,
+  a:focus {
+    color: $red;
+    border: $red solid 1px;
+  }
 }
 
 h2,
@@ -78,4 +80,16 @@ footer {
 
 option {
   color: $navy;
+}
+
+span {
+  a {
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s linear;
+  }
+  a:hover,
+  a:focus {
+    color: $white;
+  }
 }
