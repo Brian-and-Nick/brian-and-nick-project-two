@@ -1,37 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hot Artist App</title>
-</head>
-<body>
-    <div class="wrapper">
+    <script
+      src="https://kit.fontawesome.com/dbae5020f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header class="wrapper">
+      <div class="headingWords">
+        <h1>💥HOT💥 Artists</h1>
 
-        <div class="headingWords">
-        <h1>HOT Artists App</h1>
-        
-        <h2>how many streams does your favourite artist have?...Select an artist to find out!</h2>
+        <h2>how many streams does your favourite artist have?</h2>
+        <h2>Select an artist to find out!</h2>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <div class="selectArtist">
+        <form action="" class="selectArtist">
+          <label for="artist"></label>
+          <select name="artist" id="artist">
+            <!-- Will be populated by using API -->
+            <option value="" selected disabled hidden>Choose an artist</option>
+          </select>
+        </form>
+
+        <label for="randomizer"></label>
+        <button type="submit" id="randomizer">Recommend Me An Artist</button>
+      </div>
+
+      <div class="artistInfo">
+        <!-- Also will be populated by using API with name, playcount, and URL -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="socialsContainer">
+        <div class="socialsWrapper wrapper">
+          <div class="brianSocials">
+            <h4>Brian's Socials!</h4>
+            <ul class="brianSocialsList">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/brian-yoon-7ba86b214/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://noodlesandcodes.com/" target="_blank">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/noodlesandcodes" target="_blank">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/byoonmusic/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="nickSocials">
+            <h4>Nick's Socials!</h4>
+            <ul class="nickSocialsList">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/nick-ntoukas-45a875125/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.nickntoukas.com/" target="_blank">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/nickntouk" target="_blank">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/doukanator/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
-        <div class="selectArtist">
-                <label for="artist">Choose an artist</label>
-                <select name="artist" id="artist">
-                <option value=""></option>
-                    <!-- Will be populated by using API -->
-                </select>
-        </div>
-
-        <div class="artistInfo">
-            <!-- Also will be populated by using API with name, playcount, and URL -->
-
-        </div>
-        <footer>Made in Juno College 2022</footer>
-    </div>
-
+      </div>
+      <div class="madeByFooter">
+        <p>
+          Made by Nick and Brian @
+          <span
+            ><a href="https://junocollege.com/" target="_blank"
+              >Juno College</a
+            ></span
+          >
+          2022
+        </p>
+      </div>
+    </footer>
 
     <script src="./script/script.js"></script>
-</body>
+  </body>
 </html>

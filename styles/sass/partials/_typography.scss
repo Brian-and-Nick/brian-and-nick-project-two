@@ -2,35 +2,94 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
-$raleway: 'Raleway', sans-serif; 
+$raleway: 'Raleway', sans-serif;
 $amaticSc: 'Amatic SC', sans-serif;
-$red: #F05454;
+$red: #f05454;
 $black: #121212;
-$white: #F5F5F5;
-$navy: #30475E;
+$white: #f5f5f5;
+$navy: #3d6892;
 $headfont: 4rem;
 $subheadfont: 2.5rem;
 
 body {
-    background-color: $white;
+  background-color: $white;
+  min-height: 100vh;
 }
 
-h1, h2 {
-    color: $red
+h1,
+h3,
+h4 {
+  color: $red;
 }
 
 h1 {
-    font-family: $raleway;
-    font-size: $headfont;    
-    text-transform: uppercase;
+  margin-bottom: 0px;
+  padding-bottom: 1em;
 }
 
 h2 {
-    font-family: $amaticSc;
-    font-size: $subheadfont;
+  margin: 0;
+  color: $navy;
 }
 
-label {
-    font-family: $amaticSc;
-    color: $navy;
+h1,
+h3 {
+  font-family: $raleway;
+  font-size: $headfont;
+  text-transform: uppercase;
+}
+
+h3,
+h4,
+p {
+  margin: 20px 0;
+  text-align: center;
+}
+
+p {
+  font-size: $subheadfont;
+  font-family: $raleway;
+}
+.artistInfo {
+  a {
+    text-decoration: none;
+    color: $black;
+    // transition: 0.2s linear;
+    border-radius: 100px;
+    padding: 0.2em;
+  }
+  a:hover,
+  a:focus {
+    color: $red;
+    border: $red solid 1px;
+  }
+}
+
+h2,
+h4 {
+  font-family: $amaticSc;
+  font-size: $subheadfont;
+}
+footer {
+  p {
+    font-family: $raleway;
+    font-size: 1.2rem;
+    padding: 0.2em;
+  }
+}
+
+option {
+  color: $navy;
+}
+
+span {
+  a {
+    text-decoration: none;
+    color: $black;
+    transition: 0.2s linear;
+  }
+  a:hover,
+  a:focus {
+    color: $white;
+  }
 }

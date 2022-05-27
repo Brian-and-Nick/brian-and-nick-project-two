@@ -1,0 +1,77 @@
+@media (max-width: 960px) {
+  .headingWords {
+    h1,
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .selectArtist {
+    #artist,
+    #randomizer {
+      width: 80%;
+    }
+  }
+
+  .artistInfo {
+    h3 {
+      font-size: 3rem;
+    }
+  }
+  footer {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .artistInfo {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .headingWords {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  .selectArtist {
+    #artist,
+    #randomizer {
+      width: 80%;
+    }
+  }
+
+  .socialsWrapper {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .brianSocialsList,
+  .nickSocialsList {
+    margin: 1em 3em;
+  }
+
+  .artistInfo {
+    a {
+      font-size: 1.5rem;
+      color: $navy;
+    }
+  }
+
+  option,
+  select,
+  button {
+    font-size: 0.7rem;
+  }
+} ;

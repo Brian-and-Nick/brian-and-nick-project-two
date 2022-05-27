@@ -1,17 +1,84 @@
 html {
-    font-size: 125%;
-    
+  font-size: 125%;
 }
 
-.wrapper { 
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 80%;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .headingWords {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.selectArtist {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+
+  label {
+    text-align: center;
+  }
+
+  #artist,
+  #randomizer {
+    width: 50%;
+    align-self: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: $red;
+    border: none;
+    color: $white;
+    font-family: $raleway;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:active {
+    letter-spacing: 5px;
+  }
+
+  button:after,
+  button:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: ' ';
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  button:hover:after,
+  button:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 100%;
+  }
+}
+
+label {
+  padding: 0.5em;
+}
+
+.artistInfo {
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+  min-height: 45vh;
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: $navy;
+  }
+}
