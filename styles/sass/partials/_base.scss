@@ -69,3 +69,15 @@ html {
 label {
   padding: 0.5em;
 }
+
+.artistInfo {
+  padding-top: 2em;
+  min-height: 30vh;
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: $navy;
+  }
+}

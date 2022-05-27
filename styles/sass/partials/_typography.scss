@@ -7,7 +7,7 @@ $amaticSc: 'Amatic SC', sans-serif;
 $red: #f05454;
 $black: #121212;
 $white: #f5f5f5;
-$navy: #3d689236;
+$navy: #3d6892;
 $headfont: 4rem;
 $subheadfont: 2.5rem;
 
@@ -17,7 +17,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4 {
   color: $red;
@@ -25,10 +24,12 @@ h4 {
 
 h1 {
   margin-bottom: 0px;
+  padding-bottom: 1em;
 }
 
 h2 {
   margin: 0;
+  color: $navy;
 }
 
 h1,
@@ -75,8 +76,6 @@ footer {
   }
 }
 
-label {
-  font-family: $amaticSc;
-  font-size: 3rem;
+option {
   color: $navy;
 }

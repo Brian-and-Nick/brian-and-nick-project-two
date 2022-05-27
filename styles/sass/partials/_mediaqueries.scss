@@ -30,7 +30,7 @@
     h1,
     h2 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
@@ -46,9 +46,27 @@
       font-size: 2rem;
     }
   }
+
   .socialsWrapper {
     display: flex;
 
     flex-direction: column;
+  }
+
+  .brianSocialsList,
+  .nickSocialsList {
+    margin: 1em 5em;
+  }
+
+  .artistInfo {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+  option {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
   }
 } ;

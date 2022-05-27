@@ -8,7 +8,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4 {
   color: #f05454;
@@ -16,10 +15,12 @@ h4 {
 
 h1 {
   margin-bottom: 0px;
+  padding-bottom: 1em;
 }
 
 h2 {
   margin: 0;
+  color: #3d6892;
 }
 
 h1,
@@ -66,10 +67,8 @@ footer p {
   padding: 0.2em;
 }
 
-label {
-  font-family: "Amatic SC", sans-serif;
-  font-size: 3rem;
-  color: rgba(61, 104, 146, 0.2117647059);
+option {
+  color: #3d6892;
 }
 
 html {
@@ -406,13 +405,24 @@ label {
   padding: 0.5em;
 }
 
+.artistInfo {
+  padding-top: 2em;
+  min-height: 30vh;
+}
+.artistInfo h3 {
+  padding: 0;
+  margin: 0;
+}
+.artistInfo a {
+  color: #3d6892;
+}
+
 body {
   background-color: #f5f5f5;
   min-height: 100vh;
 }
 
 h1,
-h2,
 h3,
 h4 {
   color: #f05454;
@@ -420,10 +430,12 @@ h4 {
 
 h1 {
   margin-bottom: 0px;
+  padding-bottom: 1em;
 }
 
 h2 {
   margin: 0;
+  color: #3d6892;
 }
 
 h1,
@@ -470,10 +482,8 @@ footer p {
   padding: 0.2em;
 }
 
-label {
-  font-family: "Amatic SC", sans-serif;
-  font-size: 3rem;
-  color: rgba(61, 104, 146, 0.2117647059);
+option {
+  color: #3d6892;
 }
 
 .madeByFooter {
@@ -497,16 +507,13 @@ ul {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 ul a:hover,
 ul a:focus {
   border: none;
-}
-ul li {
-  margin: 0 0.5em;
 }
 
 .socialsWrapper {
@@ -557,7 +564,7 @@ i:focus {
   .headingWords h1,
 .headingWords h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .selectArtist #artist,
@@ -577,5 +584,22 @@ i:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .brianSocialsList,
+.nickSocialsList {
+    margin: 1em 5em;
+  }
+
+  .artistInfo a {
+    font-size: 1.5rem;
+  }
+
+  option {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
   }
 }
